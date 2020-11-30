@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>Hangman</title>
+</head>
+<body>
+    <main>
+        <div class="header">
+            <h1>Hangman</h1>
+            <button class="btn">Begin Game</button>
+        </div>
+        <div class="container-game">
+            <h2 id="guess">Guess the word:</h2>
+            <div class="word">
+               <p id="wordSpotlight">asd</p>
+            </div>
+            <div class="float-right">Wrong Guesses: <span id='mistakes'>0</span> of <span id='maxWrong'></span></div>
+            <div id="buttons"></div>
+            <div id="keyboard"></div>
+        </div>
+
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
