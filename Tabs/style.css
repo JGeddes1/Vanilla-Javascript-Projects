@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img:not(.logo) {
+  width: 100%;
+}
+img {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: 0.25rem;
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+
+.btn {
+  text-transform: uppercase;
+  background: transparent;
+  color: #222;
+  padding: 0.375rem 0.75rem;
+  letter-spacing: 0.25rem;
+  display: inline-block;
+  transition: all 0.3s linear;
+  font-size: 0.875rem;
+  border: 2px solid black;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+}
+.btn:hover {
+  color: white;
+  background: blueviolet;
+}
+/* section */
+.section {
+  padding: 5rem 0;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+/*
+=============== 
+About
+===============
+*/
+.title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.title p {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.about-img {
+  margin-bottom: 2rem;
+}
+.about-img img {
+  border-radius: 0.25rem;
+  object-fit: cover;
+  height: 20rem;
+}
+
+@media screen and (min-width: 992px) {
+  .about-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    /* makes the tabs go to right when above 992 pixels */
+  }
+
+  .about-img {
+    margin-bottom: 0;
+    /* removes margin as part no longer below */
+  }
+}
+
+/* the about tab written part */
+.about {
+  background: rgb(175, 148, 148);
+  border-radius: 0.25rem;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.btn-container {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* buttons tabs */
+.tab-btn {
+  padding: 1rem 0;
+  border: none;
+  text-transform: capitalize;
+  font-size: 1rem;
+  display: block;
+  background: grey;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  letter-spacing: var(--spacing);
+}
+.tab-btn:hover:not(.active) {
+  background: hsl(205, 100%, 96%);
+  color: #49a6e9;
+}
+/* ddont think need really */
+.tab-btn:nth-child(1) {
+  border-top-left-radius: 0.25rem;
+}
+.tab-btn:nth-child(3) {
+  border-top-right-radius: 0.25rem;
+}
+
+/* the actual text area  */
+.about-content {
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+  padding: 2rem 1.5rem;
+}
+
+/* hide content */
+.content {
+  display: none;
+}
+.tab-btn.active {
+  background: white;
+}
+.content.active {
+  display: block;
+}
